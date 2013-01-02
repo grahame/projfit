@@ -1,0 +1,9 @@
+data/
+plots/
+cache/
+tmp/
+.*swp
+*.pyc
+*.pyo
+.DS_Store
+__pycache__
