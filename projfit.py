@@ -43,10 +43,10 @@ if __name__ == '__main__':
                     urcrnrlon=proj_lng2, urcrnrlat=proj_lat1)
             x, y = m(lngs, lats)
             m.scatter(x, y, vmin=vmin, vmax=vmax, s=3, marker='s', edgecolor='none', c=vals, cmap=cm.OrRd)
-            plt.xlabel("Average error %.2f%%, median error %.2f%%, std dev %.2f" % (np.average(vals), np.median(vals), np.std(vals)))
-            cbar = plt.colorbar()
+            plt.xlabel("Error range %.3f%% to %.3f%%, average %.3f%%, median %.3f%%, std dev %.3f%%" % (np.min(vals), np.max(vals), np.average(vals), np.median(vals), np.std(vals)))
+            cbar = plt.colorbar(orientation='vertical', shrink=0.3)
             cbar.set_label("% error (four nearest points)")
-            fig.savefig('plots/%s%s.png' % (loader.config['prefix'], srid), dpi=200)
+            fig.savefig('plots/%s%s.png' % (loader.config['prefix'], srid), dpi=200, bbox_inches='tight')
     def run_sql(sql):
         cmd = subprocess.Popen(["psql", "projfit"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
         cmd.stdin.write(sql)
