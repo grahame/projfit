@@ -1,9 +1,12 @@
 
 See the file `LICENSE` for software license details.
 
-Measures how well an `ST_Distance` calculation is matching the slower
-(but more correct) measurement of distance using `ST_Distance_Spheroid`
-on the WGS 84 spheroid.
+Measures how well an `ST_Distance` calculation is matching the
+slower (but more correct) measurement of distance using
+`ST_Distance_Spheroid` on the WGS 84 spheroid. Example plot below,
+from running the `aus` recipe.
+
+![Example projection fit](https://raw.github.com/grahame/projfit/master/examples/australia_3112.png "Geoscience Australia Lambert fit")
 
 Requirements:
 
