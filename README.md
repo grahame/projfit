@@ -28,3 +28,9 @@ must provide a `load_geometry` method, at the conclusion of which there
 will be a table in the database called `fit_geom` with one row and one 
 column, `geom` containing the geometry the experiments are to be applied to.
 
+This is a quick hack -- but I couldn't find anything else doing what 
+I wanted. Patches to clean this up (and maybe use SQLalchemy rather than 
+fragments of shell and raw SQL) would be gladly accepted.
+
+
+
