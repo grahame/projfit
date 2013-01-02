@@ -6,12 +6,14 @@ slower (but more correct) measurement of distance using
 `ST_Distance_Spheroid` on the WGS 84 spheroid. Example plot below,
 from running the `aus` recipe.
 
-![Example projection fit](https://raw.github.com/grahame/projfit/master/examples/australia_3112.png "Geoscience Australia Lambert fit")
+![Example fit to Australia](https://raw.github.com/grahame/projfit/master/examples/australia_3112.png "Geoscience Australia Lambert fit")
+
+![Example fit to Western Australia](https://raw.github.com/grahame/projfit/master/examples/western_australia_32750.png "UTM zone 50S fit")
 
 Requirements:
 
  - Postgresql / PostGIS
- - Python
+ - Python, Matplotlib, Basemap
  - GEOS, GDAL
 
 Usage:
