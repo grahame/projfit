@@ -165,10 +165,10 @@ SELECT
     srid,
     st_x(point) as lng,
     st_y(point) as lat,
-    (abs(true_dn - dn)/true_dn + 
-        abs(true_ds - ds)/true_ds + 
-        abs(true_de - de)/true_de + 
-        abs(true_dw - dw)/true_dw)/4*100 AS avg_per_error
+    greatest(abs(true_dn - dn)/true_dn, 
+             abs(true_ds - ds)/true_ds, 
+             abs(true_de - de)/true_de, 
+             abs(true_dw - dw)/true_dw)*100 AS avg_per_error
     INTO results
     FROM srid_distances
     INNER JOIN true_distances ON true_distances.id = srid_distances.id;
